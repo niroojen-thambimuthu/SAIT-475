@@ -81,3 +81,5 @@ sns.lineplot(
 # we are only interested in InvoiceNo, StockCode, Description columns
 
 df.to_pickle("UK.pkl")
+
+# %%
