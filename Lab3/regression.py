@@ -31,6 +31,8 @@ sns.distplot(train["SalePrice"])
 sns.boxplot(x="CentralAir", y="SalePrice", data=train)
 # %%
 sns.boxplot(x="BldgType", y="SalePrice", data=train)
+# %%
+sns.boxplot(x="OverallQual", y="SalePrice", data=train)
 
 # %% SalePrice distribution w.r.t YearBuilt / Neighborhood
 import matplotlib.pyplot as plt
@@ -50,6 +52,10 @@ bx.set_xticklabels(
     rotation=45,
     fontsize=5
 )
+
+
+
+
 # %%
 from sklearn.dummy import DummyRegressor
 from sklearn.metrics import mean_squared_log_error

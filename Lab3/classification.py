@@ -30,6 +30,9 @@ sns.countplot(x="Survived", hue="Sex", data=train)
 # %%
 sns.countplot(x="Survived", hue="Pclass", data=train)
 
+# %%
+sns.countplot(x="Survived", hue="Embarked", data=train)
+
 
 # %% Age distribution ?
 sns.distplot(train["Age"],bins=8)
@@ -43,9 +46,22 @@ plt.legend()
 
 
 # %% SibSp / Parch distribution ?
+sns.distplot(train["SibSp"],bins=8)
 
+# %%
+sns.distplot(train["Parch"],bins=8)
 
 # %% Survived w.r.t SibSp / Parch  ?
+sns.distplot(train[train["Survived"]==1]["SibSp"],bins=8, label="Survived")
+sns.distplot(train[train["Survived"]==0]["SibSp"],bins=8, label="Passed away")
+import matplotlib.pyplot as plt
+plt.legend()
+
+# %%
+sns.distplot(train[train["Survived"]==1]["Parch"],bins=8, label="Survived")
+sns.distplot(train[train["Survived"]==0]["Parch"],bins=8, label="Passed away")
+import matplotlib.pyplot as plt
+plt.legend()
 
 
 # %% Dummy Classifier

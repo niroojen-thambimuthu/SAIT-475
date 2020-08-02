@@ -39,7 +39,7 @@ sns.scatterplot(
 )
 
 
-# %% also try lmplot and pairplot
+# %% also try lmplot and pairplot, area/perimeter vs compactness
 sns.lmplot(
     x="area",
     y="compactness",
@@ -47,6 +47,19 @@ sns.lmplot(
     hue="target",
     legend="full",
 )
+
+# %%
+sns.pairplot(df)
+
+# %%
+sns.lmplot(
+    x="compactness",
+    y="perimeter",
+    data=df,
+    hue="target",
+    legend="full",
+)
+
 
 # %%
 sns.pairplot(df)

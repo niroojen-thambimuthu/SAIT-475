@@ -4,6 +4,12 @@ import pandas as pd
 
 df = pd.read_csv("DATA475_lab_rectangles_data.csv")
 df["area"] = df["width"] * df["length"]  # Line 6
+df["area"].max()
+test = df.head(45)
+test
+
+# %%
+test["area"].max()
 
 # %%
 summary = [
