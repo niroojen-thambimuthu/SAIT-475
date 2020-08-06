@@ -17,7 +17,6 @@ with ruleset("crossing_street"):
     def red_light(c):
         print("Stop.")
 
-
 post("crossing_street", {"color": "red"})
 post("crossing_street", {"color": "green"})
 post("crossing_street", {"color": "yellow"})
